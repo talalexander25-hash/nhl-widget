@@ -54,7 +54,7 @@
                 setLoading(true);
                 setError(null);
                 try {
-                    const response = await fetch(`https://api-web.nhle.com/v1/schedule/${date}`);
+                    const response = await fetch(`https://corsproxy.io/?https://api-web.nhle.com/v1/schedule/${date}`);
                     if (!response.ok) throw new Error('Failed to fetch games');
                     const data = await response.json();
                     
